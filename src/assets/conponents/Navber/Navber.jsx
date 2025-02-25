@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navber = () => {
     return (
-        <div className='flex gap-3 list-none'>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/section">Section</a></li>
-            <li><a href="/content"> Content</a></li>
+        <div className='flex justify-center bg-gray-400 p-5 text-black gap-10 list-none'>
+            <Link to='/'>Home</Link>
+            <Link to='/about'>About</Link>
+            <Link to='/section'>Section</Link>
+            <Link to='/content'>Content</Link>         
         </div>
     );
 };
