@@ -9,6 +9,7 @@ const Navber = () => {
             <Link to='/section'>Section</Link>
             <Link to='/content'>Content</Link>   
             <Link to='/users'>users</Link>   
+            <Link to ='/posts'>posts</Link>
                   
         </div>
     );
