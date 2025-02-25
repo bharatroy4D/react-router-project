@@ -12,33 +12,39 @@ import About from './assets/conponents/About/About.jsx';
 import Content from './assets/conponents/Content/Content.jsx';
 import Section from './assets/conponents/section/Section.jsx';
 import Users from './assets/conponents/Users/Users.jsx';
+import UserDtails from './assets/conponents/UserDetails/UserDtails.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
     children: [
-        {
-          path:"/",
-          element:<Home></Home>
-        },
-        {
-          path:"/about",
-          element:<About></About>
-        },
-        {
-          path:"/section",
-          element:<Section></Section>
-        },
-        {
-          path:"/content",
-          element:<Content></Content>
-        },
-        {
-          path:"/users",
-          loader: ()=> fetch('https://jsonplaceholder.typicode.com/users'),
-          element:<Users></Users>
-        }
+      {
+        path: "/",
+        element: <Home></Home>
+      },
+      {
+        path: "/about",
+        element: <About></About>
+      },
+      {
+        path: "/section",
+        element: <Section></Section>
+      },
+      {
+        path: "/content",
+        element: <Content></Content>
+      },
+      {
+        path: "/users",
+        loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
+        element: <Users></Users>
+      },
+      {
+        path:"/user/:id",
+        loader:({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`),
+        element:<UserDtails></UserDtails>
+      }
     ]
   },
 ]);
