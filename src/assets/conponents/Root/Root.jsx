@@ -1,9 +1,14 @@
 import React from 'react';
+import Navber from '../Navber/Navber';
+import { Outlet } from 'react-router-dom';
+import Foter from '../Footer/Foter';
 
 const Root = () => {
     return (
         <div>
-            <h1>I am root of main page</h1>
+            <Navber></Navber>
+            <Outlet></Outlet>
+            <Foter></Foter>
         </div>
     );
 };
